@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titleDesign"><span (click)="back()"><ion-icon name="arrow-back-outline"></ion-icon></span> {{ userdetails.userId }}</ion-title>
+    <ion-img [src]="userdetails.user_img" alt="Image missing"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true">
+
+  <ion-card class="cardDesign">
+    <ion-card-header>
+      <ion-card-title>
+        <div class="titleDiv"><b>{{ userdetails.name }}</b></div>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="details">{{ userdetails.age }} Yrs, {{ userdetails.ht_ft }} ft {{ userdetails.ht_in }} in, {{ userdetails.lang }}, {{
+        userdetails.caste }}, {{ userdetails.education }}, {{ userdetails.profession }}, {{ userdetails.city }}, {{ userdetails.state }}, {{
+        userdetails.country }}.</div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

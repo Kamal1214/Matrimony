@@ -25,3 +25,65 @@
 #container a {
   text-decoration: none;
 }
+
+.header-md::after{
+  background-image: none !important;
+}
+
+.cardDesign{
+  width: 90%;
+  border-radius: 16px
+}
+
+ion-card ion-img{
+  width: 65vw;
+  height: 100%;
+}
+
+.swiper-slide{
+  text-align: left;
+}
+
+.rowClass{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll !important;
+}
+
+.titleDiv{
+  margin-bottom: -10px;
+}
+
+ion-card-content .details{
+  color: #000;
+  font-size: 120%;
+}
+.btnGrp{
+  margin-top: 10px;
+}
+
+h1{
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-left: 16px;
+}
+
+.badge{
+  color: #FFF;
+  font-size: 40%;
+  padding: 5px;
+  margin: 0px 10px;
+  border: solid thin #FFF;
+  border-radius: 6px;
+}
+
+@media only screen and (min-width: 481px) {
+  .cardDesign{
+    width: 300px;
+    border-radius: 16px
+  }
+  ion-card ion-img{
+    width: 300px;
+    height: 100%;
+  }  
+}

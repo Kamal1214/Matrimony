@@ -1,0 +1,50 @@
+.cardDesign{
+    border-radius: 16px
+  }
+  
+  .swiper-slide{
+    text-align: left;
+  }
+  
+  .rowClass{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll !important;
+  }
+  
+  .titleDiv{
+    margin-bottom: -10px;
+  }
+  
+  ion-card-content .details{
+    color: #000;
+    font-size: 90%;
+  }
+  .btnGrp{
+    margin-top: 10px;
+  }
+  
+  h1{
+    padding-left: 16px;
+  }
+  
+  .badge{
+    color: #FFF;
+    font-size: 40%;
+    padding: 5px;
+    margin: 0px 10px;
+    border: solid thin #FFF;
+    border-radius: 6px;
+  }
+
+  .shortList{
+    margin-top: 10px;
+    color: #000;
+  }
+  
+  @media only screen and (min-width: 481px) {
+    .cardDesign{
+      width: 300px;
+      border-radius: 16px
+    }
+  }

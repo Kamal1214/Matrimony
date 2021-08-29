@@ -1,20 +1,42 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      My Matches
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content color="primary" [fullscreen]="true">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <h1><b>Profiles pending with me</b> <span class="badge">2 NEW</span></h1>
+
+  <ion-grid>
+    <ion-row class="rowClass">
+      <ion-col *ngFor="let user of userData; let i=index">
+
+        <ion-card class="cardDesign">
+          <ion-img [src]="user.user_img" alt="Image missing" (click)="openUserDetails(user)"></ion-img>
+          <ion-card-header>
+            <ion-card-title>
+              <div class="titleDiv"><b>{{ user.name }}</b></div>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <div class="details">{{ user.age }} Yrs, {{ user.ht_ft }} ft {{ user.ht_in }} in, {{ user.lang }}, {{
+              user.caste }}, {{ user.education }}, {{ user.profession }}, {{ user.city }}, {{ user.state }}, {{
+              user.country }}.</div>
+            <div class="btnGrp">
+              <ion-button shape="round" fill="solid" color="warning" (click)="openUserDetails(user)">Yes</ion-button>
+              <ion-button shape="round" fill="outline">No</ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-button shape="round" fill="solid" color="warning" (click)="openTinderPage()">Swipe-screen</ion-button>
+
 </ion-content>

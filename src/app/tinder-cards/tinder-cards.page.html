@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-card class="cardDesign" *ngFor="let user of userData; let i=index" [style.position]="'absolute'">
+    <ion-img [src]="user.user_img" alt="Image missing"></ion-img>
+    <ion-card-header>
+      <ion-card-title>
+        <div class="titleDiv"><b>{{ user.name }}</b></div>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item class="ion-no-padding">
+        <div class="details">{{ user.age }} Yrs, {{ user.ht_ft }} ft {{ user.ht_in }} in, {{ user.lang }}, {{
+          user.caste }}, {{ user.education }}, {{ user.profession }}, {{ user.city }}, {{ user.state }}, {{
+          user.country }}.</div>
+      </ion-item>
+      <div class="shortList" (click)="shortlist(i)">
+        <ion-icon name="star"></ion-icon> Shortlist
+      </div>
+
+      <ion-row>
+        <ion-col>
+          <div class="shortList">
+            <b>Like him?</b>
+          </div>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" fill="outline" (click)="notInterested(i)">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" fill="solid" color="warning" (click)="interested(i)">
+            <b>
+              <ion-icon color="light" name="checkmark"></ion-icon>
+            </b>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

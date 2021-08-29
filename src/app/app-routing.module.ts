@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'user-details',
+    loadChildren: () => import('./user-details/user-details.module').then( m => m.UserDetailsPageModule)
+  },
+  {
+    path: 'tinder-cards',
+    loadChildren: () => import('./tinder-cards/tinder-cards.module').then( m => m.TinderCardsPageModule)
+  },
 ];
 
 @NgModule({
